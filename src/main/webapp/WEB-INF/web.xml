@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>HelloJSP</display-name>
   
-   <!-- 특정 파일/서비스 명시하지 않았을 때 보여줄 기본 페이지 -->
+  <!-- 특정 파일/서비스 명시하지 않았을 때 보여줄 기본 페이지 -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -12,7 +12,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-   <!-- Context 초기화 파라미터:
+  <!-- Context 초기화 파라미터:
   - 웹 앱 내의 모든 서블릿, JSP가 공유하는 파라미터
    -->
   <context-param>
@@ -22,7 +22,7 @@
   
   <context-param>
   	<param-name>dbpass</param-name>
-  	<param-value>user</param-value>
+  	<param-value>bituser</param-value>
   </context-param>
   
   <!-- 서블릿 정보 등록 -->
