@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>HelloJSP</display-name>
+  
+   <!-- 특정 파일/서비스 명시하지 않았을 때 보여줄 기본 페이지 -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,4 +11,46 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- Context 초기화 파라미터:
+  - 웹 앱 내의 모든 서블릿, JSP가 공유하는 파라미터
+   -->
+  <context-param>
+  	<param-name>dbuser</param-name>
+  	<param-value>c##bituser</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>dbpass</param-name>
+  	<param-value>user</param-value>
+  </context-param>
+  
+  <!-- 서블릿 정보 등록 -->
+  <servlet>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<servlet-class>HelloServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>LifeCycleCheck</servlet-name>
+  	<servlet-class>LifeCycleServlet</servlet-class>
+  	<!-- 서블릿 초기화 파라미터:
+  	개별 서블릿에서만 사용할 수 있다.
+  	 -->
+  	<init-param>
+  		<param-name>servlet-param</param-name>
+  		<param-value>서블릿 초기화 파라미터</param-value>
+  	</init-param>
+  </servlet>
+  
+  <!-- 서블릿 매핑 정보 등록 -->
+  <servlet-mapping>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<url-pattern>/hs</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>LifeCycleCheck</servlet-name>
+  	<url-pattern>/life</url-pattern>
+  </servlet-mapping>
 </web-app>
