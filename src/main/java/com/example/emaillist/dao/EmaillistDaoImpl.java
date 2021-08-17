@@ -22,7 +22,7 @@ public class EmaillistDaoImpl implements EmaillistDao {
 			// Connection 가져오기
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", // DBURL
 					"C##BITUSER", // DB User
-					"USER"); // DB Pass
+					"BITUSER"); // DB Pass
 		} catch (ClassNotFoundException e) {
 			System.err.println("드라이버 로드 실패!");
 			e.printStackTrace();
