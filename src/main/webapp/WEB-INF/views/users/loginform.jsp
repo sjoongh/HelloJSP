@@ -1,14 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>My Home: Login Form</title>
-</head>
-<body>
+<jsp:include page="/WEB-INF/views/includes/header.jsp">
+	<jsp:param value="로그인" name="message"/>
+</jsp:include>
 
-	<h1>Login</h1>
 	<form method="POST"
 		action="<%= request.getContextPath() %>/users">
 		<!-- action 파라미터 -->
@@ -19,5 +14,4 @@
 		<input type="password" name="password" id="password" /><br />
 		<input type="submit" value="로그인" />
 	</form>
-</body>
-</html>
+<%@ include file="/WEB-INF/views/includes/footer.jsp" %> 

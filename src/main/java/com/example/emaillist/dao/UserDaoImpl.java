@@ -18,7 +18,7 @@ public class UserDaoImpl implements UserDao {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			//	Connection 얻기
 			String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
-			conn = DriverManager.getConnection(dburl, "C##BITUSER", "BITUSER");
+			conn = DriverManager.getConnection(dburl, "C##BITUSER", "USER");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
